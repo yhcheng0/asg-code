@@ -1,0 +1,15 @@
+<!--Name: Cheng Yee Han-->
+<!--SID: 1155143426-->
+<script>
+    function updateact(){
+    let x = document.getElementById("eventid").value;
+    let y = document.getElementById("form").action="http://localhost:3000/event/"+x;
+    }
+</script>
+<h2>See event info:</h2>
+<form id="form" action="http://localhost:3000/event" onsubmit="updateact()">
+    <label for="eventid">Event ID</label>
+    <input type="text" id="eventid" name="id">
+    <input type="submit" value="Submit">
+</form>
+<br>

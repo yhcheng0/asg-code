@@ -1,0 +1,44 @@
+<!--Name: Cheng Yee Han-->
+<!--SID: 1155143426-->
+<script>
+    function update(){
+        
+    let cid = document.getElementById("eventid").value;
+    let newname=document.getElementById("eventname").value;
+    let newloc=document.getElementById("eventloc").value;
+    let newquota=document.getElementById("eventquota").value;
+    let n= "name="+newname;
+    let l= "loc="+newloc;
+    let q= "quota="+newquota;
+    fetch("http://localhost:3000/event/"+cid,  {
+        method: 'PUT',
+        headers: {'Content-Type':'application/x-www-form-urlencoded'},
+        body:n+'&'+l+'&'+q
+    });
+    setTimeout(()=>{location.replace('http://localhost:3000/event/'+cid)},2000);       
+    };
+    console.log("update ok");
+</script>
+
+<h1>Update Event</h1>
+
+<iframe src="seeinfo.html" style="height: 300px;" ></iframe>
+<br>
+
+    <label for="eventid">Event ID</label>
+    <input type="text" id="eventid" name="id">
+    <br>
+
+    <label for="eventname">Event name</label>
+    <input type="text" id="eventname" name="name">
+    <br>
+    
+    <label for="eventloc">location Id</label>
+    <input type="text" id="eventloc" name="loc">
+    <br>
+
+    <label for="eventquota">Event quota</label>
+    <input type="text" id="eventquota" name="quota">
+    <br>
+
+    <button type="button" onclick="javascript:update()">Update</button>

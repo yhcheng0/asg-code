@@ -1,0 +1,190 @@
+<!DOCTYPE html><!--Name: Cheng Yee Han  SID:155143426-->
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        
+        <title>BonnieCheng</title>
+        <style>body{background-color: beige;}</style>
+        <link rel="icon" type="image/x-icon" href="smile.png">
+    </head>
+    
+    <body>
+        
+        <h1 style="font-family: 'Titillium Web', sans-serif;background-image: url('bg.jpg');background-size:1200px ;background-size:cover;background-repeat: no-repeat;background-position:center;text-align:center;font-size:400%" ><b><br>Bonnie Cheng's Page<br></b></h1>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center" style="font-family: 'Titillium Web', sans-serif;" >
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link"  href="#About"> <i class="material-icons">account_circle</i> About me</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Course"><i class="material-icons">view_list</i> Course</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#rf"><i class="material-icons">cloud</i> Responsive Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#Link"><i class="material-icons">link</i> Link for learning HTML</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#webform"><i class="material-icons">star</i> Web Form</a>
+                  </li>
+                  <li  class="nav-item">
+                    <a class="nav-link" onclick="displaybutton()"style="color:red">
+                        Special!!
+                    </a>
+                  </li>
+                </ul>
+              </div>
+          </nav>
+          <nav>
+            <div id="hiddenbutton" class="container-fluid"  style="background-color:aqua; display:none">
+                <ul class="navbar-nav">
+                <li class="navbar-item">
+                    <button  class="btn btn-primary" onclick="align()">Task1: Align</button>
+                    <button class="btn btn-primary" onclick="add()">Task2: New Hobby</button>
+                    <button class="btn btn-primary" onclick="display_progressbar()">Task3: Scroll</button>
+                </li>
+                </ul>
+              </div>
+          </nav>
+ 
+
+          <div id="bar"class="progress progress-container sticky-top" style="width: 100%; height: 8px;background: #ccc;display:none">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" id="progressBar" style="height: 8px;
+            width: 0%;"></div>
+          </div>
+
+        
+        <section id="About" class="container-fluid" style="font-family: 'Oswald', sans-serif;background:rgb(187, 241, 187)">
+            <h2 id="s1_h"style ="color:green;">About Me</h2>
+            <div class="container m-5"> 
+            <picture><img src="smile.png" class="img-thumbnail img-fluid" alt="photo" width="250" style="float:left;margin-right:100px ;"></picture>
+            <p > I am a student studying Computer Engineering. I am using HTML to gengerate this page.</p>
+            <h5  >My Hobbies:</h5>
+            <ul id="hobby"style="list-style-position: inside;">
+                <li >Reading</li>
+              
+                
+            </ul>
+            <p ><mark> Email:<a href="mailto:1155143426@link.cuhk.edu.hk" target="_blank" style="text-decoration:none">1155143426@link.cuhk.edu.hk</a></mark></p>
+            <p > Click <button onclick="document.location='mailto:1155143426@link.cuhk.edu.hk'">Here</button> to email me.</p>
+            </div>
+            <br><hr>
+        </section>
+        
+        <section id="Course"class="container-fluid" style="font-family: 'Oswald', sans-serif;background:rgb(167, 219, 240);">
+            <h2 id="s2_h" style="color:blue;">Course</h2>
+            <div class="container m-5"> 
+            <table class="table table table-hover container" >
+                <caption>List of course I am studying in This term</caption>
+                <tr class="row">
+                    <th  class="col-sm-4 col-md-3 col-xl-2"><b> Course code</b></th>
+                    <th  class="col-sm-4 col-md-3 col-xl-2"><b> Course name</b></th>
+                </tr>
+                <tr class="row">
+                    <td  class="col-sm-4 col-md-3 col-xl-2"> CSCI2720</td>
+                    <td  class="col-sm-4 col-md-3 col-xl-2"> Building Web Application</td>
+                </tr>
+                <tr class="row">
+                    <td  class="col-sm-4 col-md-3 col-xl-2"> CSCI3100</td>
+                    <td  class="col-sm-4 col-md-3 col-xl-2"> Software Engineering</td>
+                </tr>
+                <tr class="row">
+                    <td  class="col-sm-4 col-md-3 col-xl-2"> CENG3420</td>
+                    <td  class="col-sm-4 col-md-3 col-xl-2"> Computer Organizationa and Design</td>
+                </tr>
+                <tr class="row">
+                    <td  class="col-sm-4 col-md-3 col-xl-2"> CENG3430</td>
+                    <td  class="col-sm-4 col-md-3 col-xl-2"> Rapid Prototyping of Digital Systems</td>
+                </tr>
+            </table>
+            </div>
+            <br><hr>
+        </section>
+        <section class="container-fluid"id="rf" style="font-family: 'Oswald', sans-serif;background:rgb(245, 226, 202);">
+            <h2 id="s3_h" style ="color:rgb(190, 129, 49);">Responsive Features</h2> 
+            <div class="container m-5"> 
+                <ul>
+                <li>Auto fit header image</li>
+                <li>container-fluid is used for each section.</li>
+                <li>img-fluid is used for the image in section #About.</li>
+                <li>navbar-expand-lg is used for the navbar.</li>
+                <li>col-sm-4 col-md-3 col-xl-2 is used for each column of the table in section #Course.</li>
+                </ul>
+            </div>
+            <hr>
+        </section>
+        
+        <section class="container-fluid"id="Link" style="font-family: 'Oswald', sans-serif;background:rgb(238, 238, 187)">
+            <h2 id="s4_h"style ="color:rgb(165, 165, 9);">Link for learning HTML</h2>
+            <div class="container m-5"> 
+                <ul type="square"><li><a href="https://www.w3schools.com/" target="_blank"> w3schools</a></li></ul>
+                <hr>
+            </div>
+        </section>
+        <section class="container-fluid"id="webform" style="font-family: 'Oswald', sans-serif;background:rgb(186, 180, 240)">
+            <h2 id="s5_h" style ="color:rgb(70, 57, 187);">Web Form</h2> 
+            <div class="container m-5">
+                <div id="comments"> 
+                  <div id="c1001" class="d-flex"> 
+                    <div class="flex-shrink-0"> 
+                      <svg height="100" width="100">
+                        <circle cx="50" cy="50" r="40" fill="blue">
+                      </svg>
+                    </div>
+                    <div class="flex-grow-1"> 
+                      <h5>1155143426@link.cuhk.edu.hk</h5>
+                      <p>hello world!</p>
+                    </div>
+                   
+                  </div>
+                </div>
+                <hr>
+                <h6>Add your comment:</h6>
+                <form>
+                <div class="mb-3">
+                  <label for="new-email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="new-email" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="new-comment" class="form-label">Comment</label>
+                  <textarea class="form-control" id="new-comment" rows="3"></textarea>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="new-color" id="new-color-red" value="red">
+                  <label class="form-check-label" for="new-color-red">Red</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="new-color" id="new-color-green" value="green">
+                    <label class="form-check-label" for="new-color-green">Green</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="new-color" id="new-color-yellow" value="yellow">
+                    <label class="form-check-label" for="new-color-yellow">Yellow</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="new-color" id="new-color-blue" value="blue">
+                    <label class="form-check-label" for="new-color-blue">Blue</label>
+                  </div>
+
+                <button type="button" class="btn btn-secondary btn-sm" onclick="processform()">Add comment</button>
+
+                
+                </form>
+              </div>
+                
+        </section>
+        <script src="myscripts.js"></script>
+    </body>
+    <footer>This website was updated on <time>2022-02-28</time>. <b>© Cheng Yee Han</b></footer>
+
+</html>
